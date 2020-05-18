@@ -2,9 +2,11 @@
 
 Swift Library. 
 
-<a link='https://jonas-sulit.com/documentations/swift'> View Documentations</a>
+[View Documentation](https://jonas-sulit.com/documentations/swift)
 
     -Contents
         • Extenstions
+        • Helpers
+        
 
 
