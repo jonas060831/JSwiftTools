@@ -1,8 +1,8 @@
 //
 //  UIView+Gradient.swift
-//  template
+//  JSwiftToolsEDITOR
 //
-//  Created by iAmJOnAs on 5/13/20.
+//  Created by iAmJOnAs on 5/18/20.
 //  Copyright © 2020 iAmJOnAs. All rights reserved.
 //
 
