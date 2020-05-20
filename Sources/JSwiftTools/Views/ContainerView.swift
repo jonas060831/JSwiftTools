@@ -43,26 +43,54 @@ public class ContainerView: UIView {
     //layerMinXMaxYCorner bottom left
     // layerMaxXMaxYCorner bottom right
     
-    private func circleCorners() {
+    public func circleCorners() {
         
-        layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner, .layerMaxXMaxYCorner, .layerMinXMaxYCorner]
+        if #available(iOS 11.0, *) {
+            layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner, .layerMaxXMaxYCorner, .layerMinXMaxYCorner]
+        } else {
+            // Fallback on earlier versions
+        }
     }
-    private func circleTopCorners(){
-        layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
+    public func circleTopCorners(){
+        if #available(iOS 11.0, *) {
+            layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
+        } else {
+            // Fallback on earlier versions
+        }
     }
-    private func circleBottomCorners(){
-        layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
+    public func circleBottomCorners(){
+        if #available(iOS 11.0, *) {
+            layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
+        } else {
+            // Fallback on earlier versions
+        }
     }
-    private func circleLeftCorners(){
-        layer.maskedCorners = [.layerMinXMaxYCorner, .layerMinXMinYCorner]
+    public func circleLeftCorners(){
+        if #available(iOS 11.0, *) {
+            layer.maskedCorners = [.layerMinXMaxYCorner, .layerMinXMinYCorner]
+        } else {
+            // Fallback on earlier versions
+        }
     }
-    private func circleRightCorners(){
-        layer.maskedCorners = [.layerMaxXMinYCorner, .layerMaxXMaxYCorner]
+    public func circleRightCorners(){
+        if #available(iOS 11.0, *) {
+            layer.maskedCorners = [.layerMaxXMinYCorner, .layerMaxXMaxYCorner]
+        } else {
+            // Fallback on earlier versions
+        }
     }
-    private func circleTopRight(){
-        layer.maskedCorners = [.layerMaxXMinYCorner]
+    public func circleTopRight(){
+        if #available(iOS 11.0, *) {
+            layer.maskedCorners = [.layerMaxXMinYCorner]
+        } else {
+            // Fallback on earlier versions
+        }
     }
-    private func circleTopLeft(){
-        layer.maskedCorners = [.layerMinXMinYCorner]
+    public func circleTopLeft(){
+        if #available(iOS 11.0, *) {
+            layer.maskedCorners = [.layerMinXMinYCorner]
+        } else {
+            // Fallback on earlier versions
+        }
     }
 }
