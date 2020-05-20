@@ -33,7 +33,7 @@ public class CircleButton: UIButton {
         addScaleEffect()
         translatesAutoresizingMaskIntoConstraints = false
     }
-    private func setShadow(){
+    public func setShadow(){
         layer.shadowColor = UIColor.black.cgColor
         layer.shadowOffset = CGSize(width: 0.0, height: 0.6)
         layer.shadowRadius = 8
@@ -41,7 +41,7 @@ public class CircleButton: UIButton {
         clipsToBounds = true
         layer.masksToBounds = false
     }
-    func addScaleEffect(){
+    public func addScaleEffect(){
         self.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
         
         UIView.animate(withDuration: 0.2, delay: 0, options: UIView.AnimationOptions.allowUserInteraction, animations: {
