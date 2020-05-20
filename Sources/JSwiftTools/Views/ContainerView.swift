@@ -43,26 +43,26 @@ public class ContainerView: UIView {
     //layerMinXMaxYCorner bottom left
     // layerMaxXMaxYCorner bottom right
     
-    public func circleCorners() {
+    private func circleCorners() {
         
         layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner, .layerMaxXMaxYCorner, .layerMinXMaxYCorner]
     }
-    public func circleTopCorners(){
+    private func circleTopCorners(){
         layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
     }
-    public func circleBottomCorners(){
+    private func circleBottomCorners(){
         layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
     }
-    public func circleLeftCorners(){
+    private func circleLeftCorners(){
         layer.maskedCorners = [.layerMinXMaxYCorner, .layerMinXMinYCorner]
     }
-    public func circleRightCorners(){
+    private func circleRightCorners(){
         layer.maskedCorners = [.layerMaxXMinYCorner, .layerMaxXMaxYCorner]
     }
-    public func circleTopRight(){
+    private func circleTopRight(){
         layer.maskedCorners = [.layerMaxXMinYCorner]
     }
-    public func circleTopLeft(){
+    private func circleTopLeft(){
         layer.maskedCorners = [.layerMinXMinYCorner]
     }
 }
