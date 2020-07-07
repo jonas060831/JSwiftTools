@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 
 public func extractTimeFromDate(date: Date, dateFormat: String) -> String {
     
@@ -21,8 +22,8 @@ public func extractTimeFromDate(date: Date, dateFormat: String) -> String {
     
     //expected output 21:30 ~> object will be military time
     
-    let hours = Int(difference!) / 3600
-    let minutes = Int(difference!) / 60 % 60
+    let hours = Int(hour!) / 3600
+    let minutes = Int(minute!) / 60 % 60
     
     var str = "\(String(format: "%02d", hours)):\(String(format: "%02d", minutes))"
     return str
