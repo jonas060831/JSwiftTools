@@ -17,16 +17,16 @@ public func extractTimeFromDate(date: Date, dateFormat: String) -> String {
     let date = dateFormatter.date(from: dateString)
     let calendar = Calendar.current
     let comp = calendar.dateComponents([.hour, .minute], from: date!)
-    let hour = comp.hour
-    let minute = comp.minute
+    var hour = "\(comp.hour ?? 66)"
+    var minute = "\(comp.minute ?? 99)"
     
     //expected output 21:30 ~> object will be military time
     
-    if hour < 10 {
+    if Int(hour)! < 10 {
         hour = "0\(hour)"
     }
     
-    if minute < 10 {
+    if Int(minute)! < 10 {
         minute = "0\(minute)"
     }
 
