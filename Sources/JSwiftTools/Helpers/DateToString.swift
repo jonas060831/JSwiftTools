@@ -22,9 +22,13 @@ public func extractTimeFromDate(date: Date, dateFormat: String) -> String {
     
     //expected output 21:30 ~> object will be military time
     
-    let hours = Int(hour!) / 3600
-    let minutes = Int(minute!) / 60 % 60
+    if hour < 10 {
+        hour = "0\(hour)"
+    }
     
-    var str = "\(String(format: "%02d", hours)):\(String(format: "%02d", minutes))"
-    return str
+    if minute < 10 {
+        minute = "0\(minute)"
+    }
+
+    return "\(hour):\(minute)"
 }
